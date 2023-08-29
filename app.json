@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Cam_Img_Recognition_ReactNative_MobileApp",
+    "slug": "Cam_Img_Recognition_ReactNative_MobileApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Cam_Img_Recognition_ReactNative_MobileApp"
+}
