@@ -56,7 +56,7 @@ export default function CameraComponent({onPrediction, PokemonStats}) {
 
   const sendImageToServer = async (imageData) => {
     try {
-      const response = await fetch('http://192.168.1.79:5000/upload/', {
+      const response = await fetch('http://192.168.1.229:5000/upload/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

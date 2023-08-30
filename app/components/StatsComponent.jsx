@@ -66,6 +66,13 @@ const PokemonStats = ({ pokemonName, onSwitch }) => {
   };
 
 
+  const setTypeBackgroundColor = (type) => {
+    if (type == "POISON") {
+      return '#5e076b'
+    }
+  }
+
+
   const getStatBarColor = (statValue) => {
     if (statValue <= 29) {
       return 'rgb(255, 51, 68)'; // Red
@@ -101,20 +108,21 @@ const PokemonStats = ({ pokemonName, onSwitch }) => {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <View style={styles.container}>
       <TextInput
-        style={styles.searchBar}
+        style={[styles.shadowProp, styles.searchBar]}
         onChangeText={setSearch}
         value={search}
         onSubmitEditing={handleSubmit}
         placeholder="Search for a Pokemon"
+        placeholderTextColor="#e3e3e3"
         autoCorrect={false}
       />
       <Button title="Submit" style={styles.Buttons} onPress={handleSubmit} />
       {pokemonStats && pokemonImage && (
         <View style={styles.statsContainer}>
-          <Image source={{ uri: pokemonImage }} style={styles.image} />
-          <Text style={styles.chartTitle}>{capitalizeFirstLetter(currentPokemon)}</Text>
+          <Image source={{ uri: pokemonImage }} style={[styles.image]} />
+          <Text style={[styles.chartTitle]}>{capitalizeFirstLetter(currentPokemon)}</Text>
           <Text style={styles.Types}>{pokemonTypes.join(' / ')}</Text>
-          <View style={styles.tableContainer}>
+          <View style={[styles. shadowProp, styles.tableContainer]}>
             <View style={styles.tableRow}>
               <Text style={styles.tableLabel}>HP:</Text>
               <Text style={styles.tableValue}>{pokemonStats.hp}</Text>
@@ -159,8 +167,8 @@ const styles = StyleSheet.create({
     width: '130%',
     height: 50,
     borderColor: '#000',
-    borderWidth: 2,
     borderRadius: 5,
+    backgroundColor: '#fcfcfc',
     padding: 8,
     marginBottom: 10,
     marginTop: 0,
@@ -177,28 +185,47 @@ const styles = StyleSheet.create({
   },
   image: {
     resizeMode: 'contain',
-    marginTop: 35,
-    marginBottom: 35,
+    marginTop: 50,
+    marginBottom: 50,
     width: Dimensions.get('screen').width,
-    height: Dimensions.get('screen').height / 10,
+    height: Dimensions.get('screen').height / 7,
+  },
+  imgShadowProp: {
+    shadowColor: '#d6d6d6',
+    shadowOffset: {width: 5, height: 0},
+    shadowOpacity: 1,
+    shadowRadius: 2,
   },
   chartTitle: {
-    fontSize: 30,
+    fontSize: 32,
+    backgroundColor: '#fcfcfc',
+    borderColor: 'black',
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingVertical: 5,
+    paddingHorizontal: 20,
     fontWeight: 'bold',
     marginBottom: 8,
   },
   Types: {
     fontSize: 16,
     color: '#737373',
-    marginBottom: 20,
+    margin: 20,
   },
   tableContainer: {
     width: '150%',
-    borderWidth: 2,
-    borderColor: '#000',
     borderRadius: 5,
+    backgroundColor: '#fcfcfc',
+    opacity: 0.9,
     padding: 15,
     marginBottom: 10
+  },
+  shadowProp: {
+    shadowColor: '#171717',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.15,
+    shadowRadius: 3,
   },
   tableRow: {
     flexDirection: 'row',
