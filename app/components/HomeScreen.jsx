@@ -13,9 +13,7 @@ const HomeScreen = ({onSwitch}) => {
       <Text style={{marginTop: 20,marginBottom: 100, fontSize:33, fontWeight:'bold', textAlign:'center'}}>
         Pokemon Image Interpreter
       </Text>
-      <Text style={{marginTop: 20,marginBottom: 100, fontSize:33, fontWeight:'bold', textAlign:'center'}}>
-        Pokemon Image Interpreter
-      </Text>
+      
       <View style={styles.imgContainer}>
       <Image source={{ uri: sprite1 }} style={[styles.image]} />
       <Image source={{ uri: sprite2 }} style={[styles.image]} />
