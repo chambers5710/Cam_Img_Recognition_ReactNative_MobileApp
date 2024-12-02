@@ -1,6 +1,8 @@
 # React Native Camera Component with Server-Side Image Recognition Functionality
 
-This application was built for my portfolio to showcase a Mobile-Net trained neural network ([GitHub for that project:](https://github.com/chambers5710/Keras_Pokemon_CNN.git))that recognizes images of Pokemon. The user may snap a photo in real time of a character and the app will pass it to the development server where a prediction is made. The app then returns a basic set of data for that particular Pokemon from the PokeAPI. 
+See a demo of this application in action on YouTube [here](https://youtu.be/lfskUzg-Bxg?si=4ggcHiTG0BetBsge)
+
+This application was built for my portfolio to showcase a Mobile-Net trained neural network ([GitHub for that project](https://github.com/chambers5710/Keras_Pokemon_CNN.git))that recognizes images of Pokemon. The user may snap a photo in real time of a character and the app will pass it to the development server where a prediction is made. The app then returns a basic set of data for that particular Pokemon from the PokeAPI. 
 
 ## Installation
 
